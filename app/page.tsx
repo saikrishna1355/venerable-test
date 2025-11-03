@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CollapsibleSection from "./ui/CollapsibleSection";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -47,35 +48,38 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-[calc(100dvh-48px)] w-screen bg-gradient-to-b from-[var(--bg-grad-from)] to-[var(--bg-grad-to)] text-[var(--foreground)] flex items-start justify-center p-6 transition-colors">
-      <div className="w-full max-w-3xl">
-        <CollapsibleSection
-          title="Open Target in Chromium (Puppeteer)"
-          defaultOpen={true}
-          className="panel shadow-lg backdrop-blur"
-        >
-          <div className="flex gap-2">
-            <input
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-              placeholder="https://target.example/"
-              className="flex-1 input px-3 py-2 text-sm"
-            />
-            <button
-              onClick={openViaPuppeteer}
-              disabled={loading}
-              className="btn btn-primary px-3 py-2 text-sm disabled:opacity-50"
-            >
-              {loading ? "Opening…" : "Open via Puppeteer"}
-            </button>
-          </div>
-          {msg && (
-            <div className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
-              {msg}
+    <>
+      <SpeedInsights />
+      <div className="min-h-[calc(100dvh-48px)] w-screen bg-gradient-to-b from-[var(--bg-grad-from)] to-[var(--bg-grad-to)] text-[var(--foreground)] flex items-start justify-center p-6 transition-colors">
+        <div className="w-full max-w-3xl">
+          <CollapsibleSection
+            title="Open Target in Chromium (Puppeteer)"
+            defaultOpen={true}
+            className="panel shadow-lg backdrop-blur"
+          >
+            <div className="flex gap-2">
+              <input
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                placeholder="https://target.example/"
+                className="flex-1 input px-3 py-2 text-sm"
+              />
+              <button
+                onClick={openViaPuppeteer}
+                disabled={loading}
+                className="btn btn-primary px-3 py-2 text-sm disabled:opacity-50"
+              >
+                {loading ? "Opening…" : "Open via Puppeteer"}
+              </button>
             </div>
-          )}
-        </CollapsibleSection>
+            {msg && (
+              <div className="mt-3 text-sm text-zinc-700 dark:text-zinc-300">
+                {msg}
+              </div>
+            )}
+          </CollapsibleSection>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
