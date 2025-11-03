@@ -224,19 +224,13 @@ export async function POST(req: NextRequest) {
         Object.getOwnPropertyNames(chromiumLib)
       );
       try {
-        const exe = chromiumLib.executablePath
-          ? await chromiumLib.executablePath()
-          : chromiumLib.puppeteer.executablePath();
+        const exe = chromiumLib.executablePath;
         console.log("Chromium executable path:", exe);
 
         launchOpts.executablePath = exe;
-        launchOpts.args = [
-          ...(chromiumLib.args || chromiumLib.puppeteer?.args || []),
-          ...launchOpts.args,
-        ];
+        launchOpts.args = [...(chromiumLib.args || []), ...launchOpts.args];
         // Force headless in serverless environments
-        launchOpts.headless =
-          chromiumLib.headless ?? chromiumLib.puppeteer?.headless ?? true;
+        launchOpts.headless = chromiumLib.headless ?? true;
         console.log("Launch options set with chromiumLib:", {
           executablePath: exe,
           headless: launchOpts.headless,
