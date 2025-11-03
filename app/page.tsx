@@ -57,17 +57,17 @@ export default function Home() {
             defaultOpen={true}
             className="panel shadow-lg backdrop-blur"
           >
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <input
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="https://target.example/"
-                className="flex-1 input px-3 py-2 text-sm"
+                className="flex-1 input px-3 py-2 text-sm w-full"
               />
               <button
                 onClick={openViaPuppeteer}
                 disabled={loading}
-                className="btn btn-primary px-3 py-2 text-sm disabled:opacity-50"
+                className="btn btn-primary px-3 py-2 text-sm disabled:opacity-50 w-full sm:w-auto"
               >
                 {loading ? "Opening…" : "Open via Puppeteer"}
               </button>

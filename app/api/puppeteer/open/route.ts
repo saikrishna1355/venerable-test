@@ -94,15 +94,34 @@ export async function POST(req: NextRequest) {
   const chromiumOnly = body.chromiumOnly !== false; // default true
   const fallbackDirect = body.fallbackDirect !== false; // default true
 
-  // Dynamically import puppeteer to avoid bundling errors when not installed
+  // Dynamically import puppeteer so the bundle stays optional locally while still
+  // allowing hosting platforms (Vercel) to detect the dependency and ship it.
   let puppeteer: any = null;
   let usingCore = false;
-  try { puppeteer = (eval('require') as NodeRequire)('puppeteer'); }
-  catch {
-    try { puppeteer = (eval('require') as NodeRequire)('puppeteer-core'); usingCore = true; }
-    catch {
-      return Response.json({ ok: false, message: 'Puppeteer not installed. Install "puppeteer" (preferred) or "puppeteer-core" and set CHROME_PATH.' }, { status: 500 });
+  try {
+    const mod = await import('puppeteer');
+    puppeteer = mod?.default ?? mod;
+  } catch {
+    try {
+      const mod = await import('puppeteer-core');
+      puppeteer = mod?.default ?? mod;
+      usingCore = true;
+    } catch {
+      return Response.json(
+        {
+          ok: false,
+          message:
+            'Puppeteer packages are missing. Install "puppeteer" (preferred) or "puppeteer-core" and set CHROME_PATH for your target Chromium.',
+        },
+        { status: 500 },
+      );
     }
+  }
+  if (!puppeteer?.launch) {
+    return Response.json(
+      { ok: false, message: 'Detected puppeteer module without a launch() helper.' },
+      { status: 500 },
+    );
   }
 
   function buildArgs(withProxy: boolean): string[] {

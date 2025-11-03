@@ -88,7 +88,7 @@ export default function InterceptPage() {
 
   return (
     <div className="min-h-[calc(100dvh-48px)] w-screen bg-gradient-to-b from-[var(--bg-grad-from)] to-[var(--bg-grad-to)] text-[var(--foreground)] p-4 transition-colors">
-      <div className="flex items-center justify-between mb-3">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
         <div className="text-lg font-semibold">Intercept</div>
         <div className="flex items-center gap-2">
           <button
@@ -101,7 +101,7 @@ export default function InterceptPage() {
           >Clear (drop all)</button>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="panel overflow-auto">
           <table className="w-full text-sm">
             <thead className="sticky top-0 bg-zinc-100/80 dark:bg-zinc-900/80 backdrop-blur"><tr><th className="text-left p-2 w-20">Method</th><th className="text-left p-2">URL</th><th className="text-left p-2 w-36">Time</th></tr></thead>

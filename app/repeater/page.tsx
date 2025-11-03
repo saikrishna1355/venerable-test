@@ -211,20 +211,22 @@ export default function RepeaterPage() {
 
   return (
     <div className="min-h-[calc(100dvh-48px)] w-screen bg-gradient-to-b from-[var(--bg-grad-from)] to-[var(--bg-grad-to)] text-[var(--foreground)] p-4 transition-colors">
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div className="text-lg font-semibold">Repeater</div>
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div className="flex flex-col gap-2">
-          <div className="flex gap-2">
-            <select value={method} onChange={(e)=>setMethod(e.target.value)} className="select px-2 py-1 text-sm">
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <select value={method} onChange={(e)=>setMethod(e.target.value)} className="select px-2 py-1 text-sm w-full sm:w-auto">
               {['GET','POST','PUT','PATCH','DELETE','HEAD','OPTIONS'].map(m=> <option key={m} value={m}>{m}</option>)}
             </select>
-            <input value={url} onChange={(e)=>setUrl(e.target.value)} className="flex-1 input px-2 py-1 text-sm"/>
-            <input type="number" min={1} value={count} onChange={(e)=>setCount(parseInt(e.target.value||'1',10))} className="w-24 input px-2 py-1 text-sm"/>
-            <button onClick={send} className="btn btn-primary text-sm px-3 py-1">Send x{count}</button>
+            <input value={url} onChange={(e)=>setUrl(e.target.value)} className="flex-1 input px-2 py-1 text-sm w-full"/>
+            <div className="flex gap-2 sm:w-auto">
+              <input type="number" min={1} value={count} onChange={(e)=>setCount(parseInt(e.target.value||'1',10))} className="input px-2 py-1 text-sm w-full sm:w-24"/>
+              <button onClick={send} className="btn btn-primary text-sm px-3 py-1 w-full sm:w-auto">Send x{count}</button>
+            </div>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <textarea value={headers} onChange={(e)=>setHeaders(e.target.value)} className="h-48 textarea p-2 text-xs font-mono"/>
             <textarea value={body} onChange={(e)=>setBody(e.target.value)} className="h-48 textarea p-2 text-xs font-mono"/>
           </div>
@@ -236,9 +238,9 @@ export default function RepeaterPage() {
             </div>
             {gens.length === 0 && <div className="text-xs text-zinc-500">No placeholders detected.</div>}
             {gens.map(g => (
-              <div key={g.name} className="grid grid-cols-5 gap-2 items-center mb-2">
-                <div className="text-xs col-span-1 font-medium truncate" title={g.name}>{g.name}</div>
-                <select className="select px-2 py-1 text-xs col-span-1" value={g.mode} onChange={(e)=>setGen(g.name, { mode: e.target.value as GenMode })}>
+              <div key={g.name} className="grid grid-cols-1 sm:grid-cols-5 gap-2 items-start mb-2">
+                <div className="text-xs sm:col-span-1 font-medium truncate" title={g.name}>{g.name}</div>
+                <select className="select px-2 py-1 text-xs sm:col-span-1" value={g.mode} onChange={(e)=>setGen(g.name, { mode: e.target.value as GenMode })}>
                   <option value="constant">constant</option>
                   <option value="counter">counter</option>
                   <option value="random">random</option>
@@ -246,33 +248,33 @@ export default function RepeaterPage() {
                   <option value="wordlist">wordlist</option>
                 </select>
                 {g.mode === 'constant' && (
-                  <input className="input px-2 py-1 text-xs col-span-3" placeholder="value" value={g.constant||''} onChange={(e)=>setGen(g.name, { constant: e.target.value })}/>
+                  <input className="input px-2 py-1 text-xs sm:col-span-3" placeholder="value" value={g.constant||''} onChange={(e)=>setGen(g.name, { constant: e.target.value })}/>
                 )}
                 {g.mode === 'counter' && (
-                  <div className="col-span-3 grid grid-cols-3 gap-2 items-center">
+                  <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-2 items-center">
                     <input className="input px-2 py-1 text-xs" type="number" placeholder="from" value={g.counterStart ?? 1} onChange={(e)=>setGen(g.name, { counterStart: parseInt(e.target.value||'1',10) })}/>
                     <input className="input px-2 py-1 text-xs" type="number" placeholder="to" value={g.counterTo ?? ''} onChange={(e)=>setGen(g.name, { counterTo: e.target.value===''? undefined : parseInt(e.target.value,10) })}/>
                     <input className="input px-2 py-1 text-xs" type="number" placeholder="skip (optional)" value={g.counterStep ?? ''} onChange={(e)=>setGen(g.name, { counterStep: e.target.value===''? undefined : parseInt(e.target.value,10) })}/>
                   </div>
                 )}
                 {g.mode === 'random' && (
-                  <div className="col-span-3 grid grid-cols-2 gap-2">
+                  <div className="sm:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <input className="input px-2 py-1 text-xs" type="number" placeholder="len" value={g.randomLen ?? 8} onChange={(e)=>setGen(g.name, { randomLen: parseInt(e.target.value||'8',10) })}/>
                     <input className="input px-2 py-1 text-xs" placeholder="charset (aA0)" value={g.randomCharset || 'aA0'} onChange={(e)=>setGen(g.name, { randomCharset: e.target.value })}/>
                   </div>
                 )}
                 {g.mode === 'uuid' && (
-                  <div className="col-span-3 text-xs text-zinc-500">auto-generate v4 UUID</div>
+                  <div className="sm:col-span-3 text-xs text-zinc-500">auto-generate v4 UUID</div>
                 )}
                 {g.mode === 'wordlist' && (
-                  <textarea className="textarea p-2 text-xs col-span-3" placeholder={'one value per line'} value={g.wordlist || ''} onChange={(e)=>setGen(g.name, { wordlist: e.target.value })}/>
+                  <textarea className="textarea p-2 text-xs sm:col-span-3" placeholder={'one value per line'} value={g.wordlist || ''} onChange={(e)=>setGen(g.name, { wordlist: e.target.value })}/>
                 )}
               </div>
             ))}
           </div>
         </div>
         <div className="panel p-2">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
             <div className="text-sm font-medium">Results</div>
             <div className="flex items-center gap-2">
               <label className="text-xs flex items-center gap-1"><input type="checkbox" checked={prettyJSON} onChange={(e)=>setPrettyJSON(e.target.checked)} /> Pretty JSON</label>
@@ -291,7 +293,7 @@ export default function RepeaterPage() {
                   </div>
                   {r.res ? <div>{(r.res.body || '').length} bytes</div> : r.error ? <div className="text-red-500">{r.error}</div> : null}
                 </div>
-                <div className={`grid grid-cols-2 gap-2 px-2 transition-all duration-200 ${expanded[r.index] ? 'py-2 max-h-[1000px]' : 'py-0 max-h-0 overflow-hidden'}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-2 px-2 transition-all duration-200 ${expanded[r.index] ? 'py-2 max-h-[1000px]' : 'py-0 max-h-0 overflow-hidden'}`}>
                   <div>
                     <div className="text-xs font-medium mb-1 flex items-center justify-between">
                       <div>Request</div>
