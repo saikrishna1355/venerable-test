@@ -149,17 +149,17 @@ export async function POST(req: NextRequest) {
     console.log("Puppeteer-core imported successfully");
     if (isServerless) {
       console.log(
-        "Detected serverless environment, attempting to import chrome-aws-lambda"
+        "Detected serverless environment, attempting to import @sparticuz/chromium"
       );
       try {
-        const chrS = await import("chrome-aws-lambda");
+        const chrS = await import("@sparticuz/chromium");
         chromiumLib = (chrS as any)?.default ?? chrS;
         console.log(
-          "chrome-aws-lambda imported successfully, chromiumLib:",
+          "@sparticuz/chromium imported successfully, chromiumLib:",
           !!chromiumLib
         );
       } catch (e) {
-        console.log("Failed to import chrome-aws-lambda:", e);
+        console.log("Failed to import @sparticuz/chromium:", e);
         // no serverless chromium available; will fall back to local executable
       }
     }

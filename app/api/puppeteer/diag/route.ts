@@ -30,7 +30,7 @@ export async function GET() {
 
   let chromiumLib: any = null;
   try {
-    const mod = await import("chrome-aws-lambda");
+    const mod = await import("@sparticuz/chromium");
     chromiumLib = (mod as any)?.default ?? mod;
     info.modules.chromiumLib = true;
   } catch (e: any) {
