@@ -7,11 +7,13 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run chromium:install || true && next build",
     "start": "next start",
     "proxy": "node proxy/server.js",
     "proxy:mitm": "node proxy/mitm.js",
-    "lint": "eslint"
+     "lint": "eslint",
+     "postinstall": "node node_modules/@sparticuz/chromium/install.js || true",
+    "chromium:install": "node node_modules/@sparticuz/chromium/install.js"
   },
   "dependencies": {
     "@sparticuz/chromium": "^123.0.1",
