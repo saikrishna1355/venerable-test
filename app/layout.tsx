@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import NavBar from "./ui/NavBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,10 +13,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { var t = localStorage.getItem('theme'); var d = t ? t === 'dark' : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; document.documentElement.setAttribute('data-theme', d ? 'dark' : 'light'); if(d) document.documentElement.classList.add('dark'); else document.documentElement.classList.remove('dark'); } catch(e) {} })();`,
+          }}
+        />
+      </head>
+      <body className={`antialiased`}>
+        <NavBar />
         {children}
       </body>
     </html>

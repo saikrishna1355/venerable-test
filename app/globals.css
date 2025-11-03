@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-grad-from: #fafafa; /* zinc-50-ish */
+  --bg-grad-to: #ffffff;   /* white */
+  --surface: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --border: #e4e4e7;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --link: #2563eb;
+  --row-alt: #f9fafb;
+  --panel-border: #e4e4e7; /* subtle in light */
+  --input-border: #e4e4e7;
 }
 
 @theme inline {
@@ -19,8 +31,99 @@
   }
 }
 
+/* Explicit theme override via data-theme on html element */
+html[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --bg-grad-from: #000000;   /* black */
+  --bg-grad-to: #0a0a0a;     /* zinc-950-ish */
+  --surface: #0b0b0b;
+  --muted: #111113;
+  --muted-foreground: #9ca3af;
+  --border: #27272a;
+  --accent: #60a5fa;
+  --accent-foreground: #000000;
+  --link: #93c5fd;
+  --row-alt: #111113;
+  /* In dark, make panel borders blend with the panel to avoid bright outlines */
+  --panel-border: #0b0b0b; /* same as surface */
+  --input-border: #1c1c1d;
+}
+
+html[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --bg-grad-from: #fafafa;
+  --bg-grad-to: #ffffff;
+  --surface: #ffffff;
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --border: #e4e4e7;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --link: #2563eb;
+  --row-alt: #f9fafb;
+  --panel-border: #e4e4e7;
+  --input-border: #e4e4e7;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Global element defaults */
+* { border-color: var(--border); }
+a { color: var(--link); }
+
+/* Simple UI tokens */
+.panel { background: var(--surface); border: 1px solid var(--panel-border); border-radius: 0.75rem; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.4rem; border:1px solid var(--border); border-radius:.5rem; padding:.25rem .5rem; font-size:.75rem; background: transparent; color: var(--foreground); }
+.btn:hover { background: color-mix(in oklab, var(--foreground) 6%, transparent); }
+.btn:disabled { opacity:.6; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-foreground); }
+.btn-primary:hover { filter: brightness(0.95); }
+.btn-ghost { background: transparent; }
+.btn-ghost:hover { background: color-mix(in oklab, var(--foreground) 6%, transparent); }
+.tiny { font-size: .7rem; }
+.chip { display:inline-flex; align-items:center; padding:.15rem .5rem; border-radius:999px; border:1px solid var(--border); font-size:.7rem; }
+.input, .textarea, .select { background: var(--background); border:1px solid var(--input-border); color: var(--foreground); border-radius:.5rem; padding:.35rem .5rem; }
+.textarea { min-height: 6rem; }
+.input:focus, .textarea:focus, .select:focus { outline: 2px solid color-mix(in oklab, var(--accent) 60%, transparent); outline-offset: 1px; }
+.input::placeholder, .textarea::placeholder { color: color-mix(in oklab, var(--foreground) 55%, transparent); }
+
+/* Ensure code/pre text is readable */
+pre, code, kbd, samp { color: var(--foreground); }
+
+/* Dark mode overrides for legacy Tailwind text classes that might linger */
+html.dark .text-black,
+html.dark .text-zinc-950,
+html.dark .text-zinc-900,
+html.dark .text-zinc-800,
+html.dark .text-zinc-700 { color: var(--foreground) !important; }
+html.dark .text-zinc-600,
+html.dark .text-zinc-500,
+html.dark .text-zinc-400 { color: var(--muted-foreground) !important; }
+
+/* Dark mode overrides for common light backgrounds */
+html.dark .bg-white,
+html.dark .bg-zinc-50,
+html.dark .bg-gray-50,
+html.dark .bg-slate-50 { background-color: var(--background) !important; }
+
+/* Scrollbars (WebKit) */
+*::-webkit-scrollbar { width: 10px; height:10px; }
+*::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+*::-webkit-scrollbar-thumb:hover { background: color-mix(in oklab, var(--border) 60%, var(--foreground)); }
+
+/* Badges */
+.badge { display:inline-flex; align-items:center; padding:.1rem .5rem; border-radius:999px; border:1px solid var(--border); font-size:.7rem; }
+.badge-muted { background: var(--muted); color: var(--foreground); border-color: var(--border); }
+.badge-green { background: #16a34a; color: #ffffff; border-color: #16a34a; }
+.badge-amber { background: #f59e0b; color: #1f2937; border-color: #f59e0b; }
+.badge-red { background: #ef4444; color: #ffffff; border-color: #ef4444; }
+.badge-slate { background: #334155; color: #e5e7eb; border-color: #334155; }
+
+/* Zebra table helper */
+.table-zebra tbody tr:nth-child(even) { background: var(--row-alt); }
