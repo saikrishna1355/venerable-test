@@ -146,15 +146,25 @@ export async function POST(req: NextRequest) {
     const mod = await import("puppeteer-core");
     puppeteer = mod?.default ?? mod;
     usingCore = true;
+    console.log("Puppeteer-core imported successfully");
     if (isServerless) {
+      console.log(
+        "Detected serverless environment, attempting to import chrome-aws-lambda"
+      );
       try {
         const chrS = await import("chrome-aws-lambda");
         chromiumLib = (chrS as any)?.default ?? chrS;
-      } catch {
+        console.log(
+          "chrome-aws-lambda imported successfully, chromiumLib:",
+          !!chromiumLib
+        );
+      } catch (e) {
+        console.log("Failed to import chrome-aws-lambda:", e);
         // no serverless chromium available; will fall back to local executable
       }
     }
-  } catch {
+  } catch (e) {
+    console.log("Failed to import puppeteer-core:", e);
     return Response.json(
       {
         ok: false,
@@ -208,17 +218,25 @@ export async function POST(req: NextRequest) {
     }
     // Prefer serverless chromium when available (Vercel/AWS Lambda)
     if (usingCore && chromiumLib) {
+      console.log("Using chromiumLib for serverless chromium");
       try {
         const exe = await chromiumLib.executablePath();
-        console.log("Chromium executable path:", exe); // Add logging here
+        console.log("Chromium executable path:", exe);
 
         launchOpts.executablePath = exe;
         launchOpts.args = [...(chromiumLib.args || []), ...launchOpts.args];
         // Force headless in serverless environments
         launchOpts.headless = chromiumLib.headless ?? true;
+        console.log("Launch options set with chromiumLib:", {
+          executablePath: exe,
+          headless: launchOpts.headless,
+        });
       } catch (e) {
+        console.log("Failed to get executablePath from chromiumLib:", e);
         // fall back to local resolution below
       }
+    } else {
+      console.log("No chromiumLib available, falling back to local executable");
     }
     // Common serverless fallback paths for @sparticuz/chromium
     if (usingCore && isServerless && !launchOpts.executablePath) {
@@ -243,15 +261,23 @@ export async function POST(req: NextRequest) {
       }
     }
     if (usingCore && !launchOpts.executablePath) {
+      console.log("No executablePath set, resolving local executable");
       const { path: exe, tried } = resolveExecutable(chromiumOnly);
+      console.log("Resolved executable:", exe, "Tried:", tried);
       if (!exe)
         throw new Error(
           "Chromium not found. Set CHROME_PATH for puppeteer-core. Tried: " +
             tried.join(", ")
         );
       launchOpts.executablePath = exe;
+      console.log("Set executablePath to:", exe);
     }
+    console.log(
+      "Launching puppeteer with options:",
+      JSON.stringify(launchOpts, null, 2)
+    );
     const browser = await puppeteer.launch(launchOpts);
+    console.log("Puppeteer launched successfully");
     const page = await browser.newPage();
     try {
       await page.setViewport({
