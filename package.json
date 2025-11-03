@@ -8,7 +8,8 @@
     "start": "next start",
     "proxy": "node proxy/server.js",
     "proxy:mitm": "node proxy/mitm.js",
-    "lint": "eslint"
+     "lint": "eslint",
+    "postinstall": "node node_modules/@sparticuz/chromium/install.js || true"
   },
   "dependencies": {
     "@sparticuz/chromium": "^123.0.1",
