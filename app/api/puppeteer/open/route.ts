@@ -148,19 +148,19 @@ export async function POST(req: NextRequest) {
     usingCore = true;
     console.log("Puppeteer-core imported successfully");
     if (isServerless) {
-      // Prefer chrome-aws-lambda which downloads to /tmp and works on Vercel
+      // Prefer @sparticuz/chromium (Node 22 friendly); fall back to chrome-aws-lambda
       try {
-        const caw = await import("chrome-aws-lambda");
-        chromiumLib = (caw as any)?.default ?? (caw as any);
-        console.log("chrome-aws-lambda imported successfully");
+        const chrS = await import("@sparticuz/chromium");
+        chromiumLib = (chrS as any)?.default ?? chrS;
+        console.log("@sparticuz/chromium imported successfully");
       } catch (e1) {
-        console.log("Failed to import chrome-aws-lambda, trying @sparticuz/chromium", e1);
+        console.log("Failed to import @sparticuz/chromium, trying chrome-aws-lambda", e1);
         try {
-          const chrS = await import("@sparticuz/chromium");
-          chromiumLib = (chrS as any)?.default ?? chrS;
-          console.log("@sparticuz/chromium imported successfully, chromiumLib:", !!chromiumLib);
+          const caw = await import("chrome-aws-lambda");
+          chromiumLib = (caw as any)?.default ?? (caw as any);
+          console.log("chrome-aws-lambda imported successfully");
         } catch (e2) {
-          console.log("Failed to import @sparticuz/chromium:", e2);
+          console.log("Failed to import chrome-aws-lambda:", e2);
         }
       }
     }
