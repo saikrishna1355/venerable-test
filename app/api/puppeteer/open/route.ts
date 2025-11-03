@@ -148,7 +148,7 @@ export async function POST(req: NextRequest) {
     usingCore = true;
     if (isServerless) {
       try {
-        const chrS = await import("@sparticuz/chromium");
+        const chrS = await import("chrome-aws-lambda");
         chromiumLib = (chrS as any)?.default ?? chrS;
       } catch {
         // no serverless chromium available; will fall back to local executable
@@ -210,6 +210,8 @@ export async function POST(req: NextRequest) {
     if (usingCore && chromiumLib) {
       try {
         const exe = await chromiumLib.executablePath();
+        console.log("Chromium executable path:", exe); // Add logging here
+
         launchOpts.executablePath = exe;
         launchOpts.args = [...(chromiumLib.args || []), ...launchOpts.args];
         // Force headless in serverless environments
