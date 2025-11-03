@@ -1,13 +1,8 @@
 {
   "functions": {
-    "api/**/*.js": {
-      "maxDuration": 60,
-      "memory": 1024
-    },
-    "app/api/**": {
+    "app/api/**/route.{js,ts}": {
       "maxDuration": 60,
       "memory": 1024
     }
   }
 }
-
