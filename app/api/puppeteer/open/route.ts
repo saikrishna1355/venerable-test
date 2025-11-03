@@ -224,12 +224,12 @@ export async function POST(req: NextRequest) {
         Object.getOwnPropertyNames(chromiumLib)
       );
       try {
-        const exe = await chromiumLib.executablePath;
+        const exe = await chromiumLib.executablePath();
         console.log("Chromium executable path:", exe);
 
         launchOpts.executablePath = exe;
         launchOpts.args = [
-          ...((await chromiumLib.args) || []),
+          ...((chromiumLib.args) || []),
           ...launchOpts.args,
         ];
         // Force headless in serverless environments
