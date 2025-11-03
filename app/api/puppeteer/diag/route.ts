@@ -1,12 +1,16 @@
-export const runtime = 'nodejs';
+export const runtime = "nodejs";
 export const maxDuration = 60;
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 export async function GET() {
   const info: any = {
-    isServerless: !!(process.env.VERCEL || process.env.AWS_EXECUTION_ENV || process.env.LAMBDA_TASK_ROOT),
+    isServerless: !!(
+      process.env.VERCEL ||
+      process.env.AWS_EXECUTION_ENV ||
+      process.env.LAMBDA_TASK_ROOT
+    ),
     env: {
       GOOGLE_CHROME_SHIM: process.env.GOOGLE_CHROME_SHIM || null,
       CHROME_PATH: process.env.CHROME_PATH || null,
@@ -26,7 +30,7 @@ export async function GET() {
 
   let chromiumLib: any = null;
   try {
-    const mod = await import('@sparticuz/chromium');
+    const mod = await import("chrome-aws-lambda");
     chromiumLib = (mod as any)?.default ?? mod;
     info.modules.chromiumLib = true;
   } catch (e: any) {
@@ -34,18 +38,33 @@ export async function GET() {
   }
 
   try {
-    const mod = await import('puppeteer-core');
+    const mod = await import("puppeteer-core");
     if (mod) info.modules.puppeteerCore = true;
   } catch {}
 
   const candidates: string[] = [];
-  if (process.env.GOOGLE_CHROME_SHIM) candidates.push(process.env.GOOGLE_CHROME_SHIM);
+  if (process.env.GOOGLE_CHROME_SHIM)
+    candidates.push(process.env.GOOGLE_CHROME_SHIM);
   if (process.env.CHROME_PATH) candidates.push(process.env.CHROME_PATH);
   candidates.push(
-    '/var/task/node_modules/@sparticuz/chromium/bin/chromium',
-    path.join(process.cwd(), 'node_modules', '@sparticuz', 'chromium', 'bin', 'chromium'),
-    'chromium', 'chromium-browser', '/snap/bin/chromium', '/usr/bin/chromium', '/usr/bin/chromium-browser',
-    'google-chrome-stable', 'google-chrome', 'brave-browser', 'microsoft-edge'
+    "/var/task/node_modules/@sparticuz/chromium/bin/chromium",
+    path.join(
+      process.cwd(),
+      "node_modules",
+      "@sparticuz",
+      "chromium",
+      "bin",
+      "chromium"
+    ),
+    "chromium",
+    "chromium-browser",
+    "/snap/bin/chromium",
+    "/usr/bin/chromium",
+    "/usr/bin/chromium-browser",
+    "google-chrome-stable",
+    "google-chrome",
+    "brave-browser",
+    "microsoft-edge"
   );
 
   if (chromiumLib) {
@@ -55,7 +74,7 @@ export async function GET() {
       info.chromium.argsFromLib = chromiumLib.args || null;
       candidates.unshift(p);
     } catch (e: any) {
-      info.chromium.execFromLibError = String(e?.message || e || '');
+      info.chromium.execFromLibError = String(e?.message || e || "");
     }
   }
 
@@ -70,4 +89,3 @@ export async function GET() {
 
   return Response.json(info);
 }
-
