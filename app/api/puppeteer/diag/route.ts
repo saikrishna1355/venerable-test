@@ -18,7 +18,8 @@ export async function GET() {
     },
     modules: {
       puppeteerCore: false,
-      chromiumLib: false,
+      chromeAwsLambda: false,
+      sparticuzChromium: false,
     },
     chromium: {
       execFromLib: null as null | string,
@@ -30,11 +31,16 @@ export async function GET() {
 
   let chromiumLib: any = null;
   try {
-    const mod = await import("@sparticuz/chromium");
-    chromiumLib = (mod as any)?.default ?? mod;
-    info.modules.chromiumLib = true;
-  } catch (e: any) {
-    info.modules.chromiumLib = false;
+    const caw = await import("chrome-aws-lambda");
+    chromiumLib = (caw as any)?.default ?? caw;
+    info.modules.chromeAwsLambda = true;
+  } catch {}
+  if (!chromiumLib) {
+    try {
+      const mod = await import("@sparticuz/chromium");
+      chromiumLib = (mod as any)?.default ?? mod;
+      info.modules.sparticuzChromium = true;
+    } catch {}
   }
 
   try {
@@ -69,10 +75,15 @@ export async function GET() {
 
   if (chromiumLib) {
     try {
-      const p = await chromiumLib.executablePath();
+      const p =
+        typeof chromiumLib.executablePath === "function"
+          ? await chromiumLib.executablePath()
+          : chromiumLib.executablePath;
       info.chromium.execFromLib = p;
-      info.chromium.argsFromLib = chromiumLib.args || null;
-      candidates.unshift(p);
+      info.chromium.argsFromLib = Array.isArray(chromiumLib.args)
+        ? chromiumLib.args
+        : null;
+      if (p) candidates.unshift(p);
     } catch (e: any) {
       info.chromium.execFromLibError = String(e?.message || e || "");
     }

@@ -2,6 +2,9 @@
   "name": "venerable-test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,6 +15,7 @@
   },
   "dependencies": {
     "@sparticuz/chromium": "^123.0.1",
+    "chrome-aws-lambda": "^10.1.0",
     "@vercel/speed-insights": "^1.2.0",
     "http-mitm-proxy": "^1.1.0",
     "next": "16.0.0",

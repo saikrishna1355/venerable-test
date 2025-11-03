@@ -148,19 +148,20 @@ export async function POST(req: NextRequest) {
     usingCore = true;
     console.log("Puppeteer-core imported successfully");
     if (isServerless) {
-      console.log(
-        "Detected serverless environment, attempting to import @sparticuz/chromium"
-      );
+      // Prefer chrome-aws-lambda which downloads to /tmp and works on Vercel
       try {
-        const chrS = await import("@sparticuz/chromium");
-        chromiumLib = (chrS as any)?.default ?? chrS;
-        console.log(
-          "@sparticuz/chromium imported successfully, chromiumLib:",
-          !!chromiumLib
-        );
-      } catch (e) {
-        console.log("Failed to import @sparticuz/chromium:", e);
-        // no serverless chromium available; will fall back to local executable
+        const caw = await import("chrome-aws-lambda");
+        chromiumLib = (caw as any)?.default ?? (caw as any);
+        console.log("chrome-aws-lambda imported successfully");
+      } catch (e1) {
+        console.log("Failed to import chrome-aws-lambda, trying @sparticuz/chromium", e1);
+        try {
+          const chrS = await import("@sparticuz/chromium");
+          chromiumLib = (chrS as any)?.default ?? chrS;
+          console.log("@sparticuz/chromium imported successfully, chromiumLib:", !!chromiumLib);
+        } catch (e2) {
+          console.log("Failed to import @sparticuz/chromium:", e2);
+        }
       }
     }
   } catch (e) {
@@ -224,16 +225,14 @@ export async function POST(req: NextRequest) {
         Object.getOwnPropertyNames(chromiumLib)
       );
       try {
-        const exe = await chromiumLib.executablePath();
+        const exe = typeof chromiumLib.executablePath === 'function' ? await chromiumLib.executablePath() : chromiumLib.executablePath;
         console.log("Chromium executable path:", exe);
 
         launchOpts.executablePath = exe;
-        launchOpts.args = [
-          ...((chromiumLib.args) || []),
-          ...launchOpts.args,
-        ];
+        const libArgs = Array.isArray(chromiumLib.args) ? chromiumLib.args : [];
+        launchOpts.args = [...libArgs, ...launchOpts.args];
         // Force headless in serverless environments
-        launchOpts.headless = chromiumLib.headless ?? true;
+        launchOpts.headless = typeof chromiumLib.headless === 'boolean' ? chromiumLib.headless : true;
         console.log("Launch options set with chromiumLib:", {
           executablePath: exe,
           headless: launchOpts.headless,
