@@ -1,0 +1,1874 @@
+[
+  {
+    "id": "40cd937e-dde5-4666-95c4-cc26ffe53f12",
+    "timestamp": 1762152564818,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a46ee633-abe0-4d59-be02-3bbf5f67c4d9",
+    "timestamp": 1762152564818,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c914e8f8-c20b-4e40-b481-1e0844357755",
+    "timestamp": 1762152564819,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "19282905-6e18-49b1-bfa5-e08411150915",
+    "timestamp": 1762152564819,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "128ef88b-fa1a-472b-984c-b791ee246ae2",
+    "timestamp": 1762152574309,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "d21cf737-3175-421c-855c-9e16f251832f",
+    "timestamp": 1762152574309,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5926e53d-8aac-4a80-888c-655d4f87dd40",
+    "timestamp": 1762152574309,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "da8ca02b-5336-44df-9805-fd192502dc05",
+    "timestamp": 1762152574310,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6644b42d-22b2-402b-9c15-6340364faa6c",
+    "timestamp": 1762152574668,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4597ff91-47a3-43a3-87fe-9c048be313e0",
+    "timestamp": 1762152574668,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0d970c1d-1995-4744-ba57-c7153d3bc991",
+    "timestamp": 1762152574669,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f8833d56-dd18-414e-8446-1936978e1537",
+    "timestamp": 1762152574669,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6accf18a-5622-4483-9f44-e91e687e554b",
+    "timestamp": 1762152575313,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0100fc0f-a19a-4d82-984c-27d8197380ee",
+    "timestamp": 1762152575313,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "32c1eea8-f435-4fb9-b9e3-a72a50390435",
+    "timestamp": 1762152575314,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b538f9ec-1129-403e-9206-0f73938ad803",
+    "timestamp": 1762152575314,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "450d6025-3a6b-4362-89c7-89f4bab285c5",
+    "timestamp": 1762152575908,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "85362447-d1f3-4990-a212-dd4ff6b0d8b7",
+    "timestamp": 1762152575908,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "12baa38d-e41e-4ae3-ac72-35c1d4125121",
+    "timestamp": 1762152575909,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "01d40a21-669b-4a1d-b6d4-bb861e180406",
+    "timestamp": 1762152575909,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a6b738d0-1638-40fb-a532-85714b34a41a",
+    "timestamp": 1762152576262,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ef3adba2-8233-4194-a0e1-29886b3bd99f",
+    "timestamp": 1762152576262,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ab75343a-0e8a-4f70-8617-795ff8c860d1",
+    "timestamp": 1762152576263,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9fac732b-682c-4c95-886b-7ff2ba4e6d0e",
+    "timestamp": 1762152576263,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "951a50f1-72e7-4f4d-ab87-94473e4a5c82",
+    "timestamp": 1762152576899,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "172384c2-a87c-4d1b-bfa1-71f569198fac",
+    "timestamp": 1762152576900,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "14fd2cea-bf32-42aa-a3ec-22b0cd9d0ab0",
+    "timestamp": 1762152576900,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6fd34fc9-acc3-425b-8ae1-ddf68e2e2168",
+    "timestamp": 1762152576901,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9002e3a1-b30c-4b81-990b-ef52738b20ae",
+    "timestamp": 1762152577504,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a069ccb5-08a1-4098-8d4a-d1eef7bef4fc",
+    "timestamp": 1762152577504,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0e88b263-7026-41bf-a45b-7b7fe2b341bf",
+    "timestamp": 1762152577504,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "403ed326-ad36-43fd-9467-660c5877f717",
+    "timestamp": 1762152577505,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "98e8665b-f9c0-4457-9419-930cec87f56e",
+    "timestamp": 1762152577830,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "28bbbf79-3a8c-450a-8025-48f17db662a7",
+    "timestamp": 1762152577830,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "68827f69-4611-408f-a6f6-61f546135681",
+    "timestamp": 1762152577830,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "66e4753d-0884-46eb-8da4-a4073c0d99d8",
+    "timestamp": 1762152577831,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9caa423d-d8ae-4346-8806-3c1705dbd2cd",
+    "timestamp": 1762152578316,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1f56cf82-8552-453e-a370-b46040a25897",
+    "timestamp": 1762152578316,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b6d38d83-b462-4e6c-87e8-970e80469ccf",
+    "timestamp": 1762152578317,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "31bc5da1-5975-487c-bd63-b3c83ae538c5",
+    "timestamp": 1762152578317,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5a7b7e2a-79f7-4c49-b277-d0930371c92f",
+    "timestamp": 1762152578804,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1d97f032-6a1d-482c-abab-675038d55e5a",
+    "timestamp": 1762152578805,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "861fe671-9a94-4454-bdbe-9ab1f2dd822e",
+    "timestamp": 1762152578805,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "85dbd565-7ae7-47e1-b44c-97f29d48e5ad",
+    "timestamp": 1762152578806,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "99394d9b-1282-4a1e-b6dc-9624194d14fc",
+    "timestamp": 1762152579466,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c421c953-b696-4d61-8c7d-00b86afe17e0",
+    "timestamp": 1762152579466,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e5b3135a-f81e-4b6b-9699-112c66c6fb1a",
+    "timestamp": 1762152579467,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "01604267-a0dd-4e31-a641-de4df3dc37b3",
+    "timestamp": 1762152579467,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "801b0fea-7f85-425d-a28d-c1a9fda6477f",
+    "timestamp": 1762152579915,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "470a2dc4-6640-4567-9d2f-026bedc72864",
+    "timestamp": 1762152579915,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b4296154-3341-4d74-a320-28626282d1aa",
+    "timestamp": 1762152579916,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a0f09d78-e922-411b-9e59-0c44430ac74f",
+    "timestamp": 1762152579916,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0ae409fd-8b4e-4cf6-9165-9d358afab68d",
+    "timestamp": 1762152580389,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b89fa194-efaa-4087-968e-36bb1a31348b",
+    "timestamp": 1762152580390,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4fe8a785-ee3e-4954-9c55-62c04291cb33",
+    "timestamp": 1762152580390,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "2997804f-2296-4ea9-a4c2-70de255c0ae2",
+    "timestamp": 1762152580391,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "7435fafe-fac2-4145-9330-0a22918c6c96",
+    "timestamp": 1762152580926,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c85de54c-4e40-4887-a460-d9fdff8aa579",
+    "timestamp": 1762152580926,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e3f7677e-642a-47ed-a302-ff9da327c972",
+    "timestamp": 1762152580927,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a1a0ddc9-86e6-462c-9e49-482741d1e6fb",
+    "timestamp": 1762152580928,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9bad977c-1f92-4cca-9a21-8e6311f21739",
+    "timestamp": 1762152581340,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b57fa2ff-6ab0-4bc6-b5f9-776dd0d0c77c",
+    "timestamp": 1762152581341,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8105fc56-9386-45e4-89ed-9ae02f7bbcbc",
+    "timestamp": 1762152581341,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "02a3f913-a886-4029-9db6-a90c4efd424f",
+    "timestamp": 1762152581341,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ef032c5c-d792-4ba2-98e6-1ad0c93ddcba",
+    "timestamp": 1762152581688,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "437680ab-c638-4951-a638-f26f1d09590b",
+    "timestamp": 1762152581688,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4d061e17-22ce-4919-8671-a1be2b57bf12",
+    "timestamp": 1762152581689,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "702964ad-5be0-45fd-911a-72ca757c2492",
+    "timestamp": 1762152581689,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "93be1189-a332-41df-8e8e-c21393299c8c",
+    "timestamp": 1762152582151,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "23196efb-e7d8-4198-a5d1-90f83c60a6d7",
+    "timestamp": 1762152582151,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0fe92e50-dd92-4516-aba9-dc019f8f4ba2",
+    "timestamp": 1762152582152,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9520e8e7-8bdd-48e7-a8fe-a7f5a97ee1af",
+    "timestamp": 1762152582152,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e66bf62c-a5b1-4a17-9d31-f1f899e3a5d9",
+    "timestamp": 1762152582488,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1ffe3343-ca10-4755-8145-ff99b1d71ca7",
+    "timestamp": 1762152582488,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6faa3329-a483-4801-9027-6f6c7e45b581",
+    "timestamp": 1762152582489,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "d4616781-f209-49dd-b8bc-9bca68cdcd2d",
+    "timestamp": 1762152582489,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "d739dea7-ea46-4898-89ca-63e8d71cb9be",
+    "timestamp": 1762152582962,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e193503d-e61a-4a09-abb8-87e8a7a05026",
+    "timestamp": 1762152582962,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c0a28310-1772-49c4-b3e4-bc87e6081c9d",
+    "timestamp": 1762152582963,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "22668f6e-8f7b-4f8f-822c-1ba3d0ddf5fc",
+    "timestamp": 1762152582964,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c3a203cc-6cc1-44ea-b28a-29c09e35d0bf",
+    "timestamp": 1762152583285,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "fcc07b72-b3be-4ec9-ae98-3b1573a36fdd",
+    "timestamp": 1762152583285,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "14e87f4a-3906-451c-a3d6-ec3e9491b6ca",
+    "timestamp": 1762152583286,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b8175768-7a9a-4069-922a-b967b855f87e",
+    "timestamp": 1762152583286,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1feab541-a149-421c-8450-eb6ba6962b6b",
+    "timestamp": 1762152583779,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ab8ac690-1b7f-4cee-880c-75d1d7b23a31",
+    "timestamp": 1762152583780,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0dea4303-a77d-4e2c-85f7-92701314b2aa",
+    "timestamp": 1762152583780,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "801adb05-2ddf-4a96-8eb4-7cdfe53a3f1a",
+    "timestamp": 1762152583782,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "d0655cef-13b9-401f-9d8e-64e338531ba5",
+    "timestamp": 1762152584088,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9e7c542c-fa72-4a74-8925-d7b9f8b4b900",
+    "timestamp": 1762152584088,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4addcc1c-ef21-4dac-9d2f-454201fc5fd2",
+    "timestamp": 1762152584089,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "581f2b2e-4069-4291-85f9-5c110153e956",
+    "timestamp": 1762152584090,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e3e8c487-6270-4739-998d-16e5f57320fd",
+    "timestamp": 1762152584454,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6c90a6ee-17a6-4d3b-9495-4f09ee305be5",
+    "timestamp": 1762152584454,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8fc63174-7d6b-449e-a24e-781f22049f2f",
+    "timestamp": 1762152584455,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a55d53f9-8848-4952-b488-cf893b89825a",
+    "timestamp": 1762152584456,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4b1616a6-b88a-46d9-99a9-12a05e186960",
+    "timestamp": 1762152584766,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "14f90db2-e937-4c6f-9087-d0f8a90fb163",
+    "timestamp": 1762152584766,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "16690f62-15ce-4d59-8d53-304f3b8508ba",
+    "timestamp": 1762152584770,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1eeb2b99-c625-4076-b68c-af19c871b021",
+    "timestamp": 1762152584770,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "42be7777-37d4-4860-9e47-def6d47a74cd",
+    "timestamp": 1762152585157,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8119a3d9-5f00-405d-9a87-920489c72f58",
+    "timestamp": 1762152585158,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "28eb34ee-f270-47ae-8c4d-2fb4aa502aba",
+    "timestamp": 1762152585158,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6c00c7e3-c0f2-4b30-bb7b-57e33746895f",
+    "timestamp": 1762152585159,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b5f8bfe2-c64f-47e8-ba07-81789ffadf4f",
+    "timestamp": 1762152585504,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "7b88cca3-1373-4ce0-85c7-244c76efcb05",
+    "timestamp": 1762152585504,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "7178fc56-0e79-4e0a-a408-bcf513578939",
+    "timestamp": 1762152585507,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1aaec9ac-d73e-438a-adc8-a727a1b16edb",
+    "timestamp": 1762152585507,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "493406fd-8f97-40c0-acf4-58b6e78f664e",
+    "timestamp": 1762152585822,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "dd1e149f-8d2e-4f80-8a4d-549db492b855",
+    "timestamp": 1762152585823,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "24550bfe-ca57-41b7-9201-2515a3281fb1",
+    "timestamp": 1762152585823,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8fb3ab03-eaa2-4235-a391-f6747cd945dc",
+    "timestamp": 1762152585824,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "89be560c-2786-41f0-873f-682ca7c21d14",
+    "timestamp": 1762152586316,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "522f5ede-6798-43d4-93b1-b380fae15838",
+    "timestamp": 1762152586317,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "242a7739-af8d-48cb-a516-fab9cde10109",
+    "timestamp": 1762152586317,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4cd433a2-c3b8-4759-924e-7b419049cd07",
+    "timestamp": 1762152586318,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0d85d05f-3d33-4113-9751-d38fecee304e",
+    "timestamp": 1762152586626,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "25813b85-3eb5-4ffb-8fd2-d23c4d8b2fe3",
+    "timestamp": 1762152586626,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8ffcd7ce-fc39-43ef-9c27-60315284862a",
+    "timestamp": 1762152586627,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e803bdf9-b7c0-4809-b333-276b5ef98463",
+    "timestamp": 1762152586627,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b8ae3c17-1000-489f-be29-ace69497ead3",
+    "timestamp": 1762152586949,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "7ef3f580-0ae2-483c-9c17-f310519682da",
+    "timestamp": 1762152586950,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "cefe65e6-7b85-42c8-bf6f-a7273c2c841f",
+    "timestamp": 1762152586950,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ead79f2c-4b84-417c-b001-602ab279f5e2",
+    "timestamp": 1762152586951,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "99994567-7cc3-4d1f-b16e-f079adf76b3c",
+    "timestamp": 1762152587274,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "3f08f5e0-a1f4-4ed2-a9c1-a32946af8243",
+    "timestamp": 1762152587274,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "1d3699eb-d022-4df5-b1a1-34796d7e9dac",
+    "timestamp": 1762152587275,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4b0c7125-4f84-4c82-8395-ed5fe4f63f45",
+    "timestamp": 1762152587275,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "351b9cdc-2637-46f8-8439-226a9d1c0ea0",
+    "timestamp": 1762152587605,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "476490d9-7613-4c73-95ec-807e7f547cf1",
+    "timestamp": 1762152587605,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "975dda12-35ac-4bf0-9363-6cec6b973b35",
+    "timestamp": 1762152587606,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f7ac00c2-30be-4e2a-a1ef-bea3cf1bd981",
+    "timestamp": 1762152587606,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "98d4df66-7dcf-459b-9ed1-4dac2de670de",
+    "timestamp": 1762152587917,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "6e210f66-1aeb-4893-a17a-936329261277",
+    "timestamp": 1762152587917,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b71e7135-6c01-494c-9dea-299de626f272",
+    "timestamp": 1762152587918,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "df00739c-c524-46dc-a884-5824ba77f7d4",
+    "timestamp": 1762152587919,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ff435ff2-f612-4785-ba6d-32875461c23f",
+    "timestamp": 1762152588384,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8ba7a252-468f-431e-bc8e-6e2c7d3b4148",
+    "timestamp": 1762152588385,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "580cdff2-9859-457d-bc33-1ee4732288aa",
+    "timestamp": 1762152588385,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "fe110bad-452b-41e2-95ca-21d8c220d324",
+    "timestamp": 1762152588386,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a1c75dec-5d72-4fdc-b468-1258c855ff09",
+    "timestamp": 1762152588704,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "201baf6c-d4a0-4ed7-8148-4f2aa513d437",
+    "timestamp": 1762152588705,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "00464236-737d-40a5-a1bb-3f44107ccd56",
+    "timestamp": 1762152588705,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "86bec42d-e1b3-4bf7-b9f4-68020117eeed",
+    "timestamp": 1762152588706,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "43778197-9c65-404e-b4f2-a68df2204109",
+    "timestamp": 1762152589047,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a6b8dfea-c4bd-4d01-84dd-68067081ddc8",
+    "timestamp": 1762152589047,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4eb2c0e8-f464-46af-9589-182e8baad4a9",
+    "timestamp": 1762152589050,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ad531f79-b732-441b-84ec-5e823570abc0",
+    "timestamp": 1762152589051,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "15a04cff-e55b-40ec-aa6f-68a73d854101",
+    "timestamp": 1762152589379,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "74831ee1-519a-42ee-bb39-090cd7a83e9f",
+    "timestamp": 1762152589379,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a3c40278-fc9d-4855-b37f-e70292dcee17",
+    "timestamp": 1762152589380,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "66afa1a4-85a0-40a5-9df0-22dc637806b2",
+    "timestamp": 1762152589383,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "315d5b50-b763-4fb3-8e9f-f7fa228e19d9",
+    "timestamp": 1762152589826,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5237c31a-2d4c-42f6-b32f-ce18b0ae7a4e",
+    "timestamp": 1762152589827,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "bd46a0bb-7020-4be2-af93-a359ee78715b",
+    "timestamp": 1762152589827,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "20e59612-2477-4ff6-a1df-b1fafc8d19ee",
+    "timestamp": 1762152589828,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "041eddea-b9dc-45c7-93e3-018bf84755cc",
+    "timestamp": 1762152590152,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "bff5aca8-c81e-41d4-b43b-4757d549c40e",
+    "timestamp": 1762152590152,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "978b57e0-aeee-4cb7-86e3-364197acff1b",
+    "timestamp": 1762152590153,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5380f3ea-774f-4ce1-a06e-0967182d288e",
+    "timestamp": 1762152590153,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0ca4f281-f319-482a-a12c-327ec4b0a5c0",
+    "timestamp": 1762152590466,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f581dbe6-de85-4764-b6dc-e808dd42d20e",
+    "timestamp": 1762152590467,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "10281011-4522-4d6a-bbc2-fa09a1885cfb",
+    "timestamp": 1762152590467,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "d55b54e1-b8b4-4a61-8c74-2264d0471962",
+    "timestamp": 1762152590468,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5e50a1d4-1e27-4769-8ba7-8b6e54a83c1f",
+    "timestamp": 1762152590932,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f47f3aad-dcec-4f8a-ab65-70149ca4ccca",
+    "timestamp": 1762152590932,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "703cb5e8-9522-48b9-a2a8-e72688746135",
+    "timestamp": 1762152590933,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8c9ebeb1-b8b5-4dfb-8405-93a0703949e4",
+    "timestamp": 1762152590933,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "3169acbf-40d1-4df0-b584-5b9921307589",
+    "timestamp": 1762152591251,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "afc1a0ba-d454-4ac5-b927-a617eb135cea",
+    "timestamp": 1762152591254,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "452f4874-52ec-4b2d-a89c-20c767161edd",
+    "timestamp": 1762152591255,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f8f1334d-e861-4377-84e0-e4d88988d24c",
+    "timestamp": 1762152591256,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "bc0d0791-b5ba-4fdc-9e03-edb365117e99",
+    "timestamp": 1762152591596,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8fe3af99-5c8f-49c4-9a0d-bb668c99b741",
+    "timestamp": 1762152591596,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9f2a60ac-b6a3-4d34-8ed0-46df6bdc2161",
+    "timestamp": 1762152591597,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "971f389a-ea2b-478c-b339-4f5b4e6407a1",
+    "timestamp": 1762152591597,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "4dc895e9-1670-4e81-8269-6f5a58effb2c",
+    "timestamp": 1762152591916,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "16afaa40-e5da-4ab7-9762-5e4f24aaef95",
+    "timestamp": 1762152591917,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e13bb2e8-c79b-4ec8-8ed7-2a45de2aa40c",
+    "timestamp": 1762152591917,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "313d1503-0ccb-438f-af1a-23a3ac28a8f8",
+    "timestamp": 1762152591919,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "5bdeb564-47b8-4981-9293-d8eb64e4428c",
+    "timestamp": 1762152592420,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "de942298-82a4-4b2f-a932-81ef2eb98d4a",
+    "timestamp": 1762152592420,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "c387c341-cd41-4a21-814c-e5a445f0e107",
+    "timestamp": 1762152592421,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8752e8fa-6733-449e-8bae-b9aa8d893f92",
+    "timestamp": 1762152592421,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "2075aab9-ada7-4195-bf15-ca74d3e65817",
+    "timestamp": 1762152592796,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "3fb9b2f7-39ec-45d4-bc24-49766d0988bf",
+    "timestamp": 1762152592797,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ef9bc15e-e8c4-4041-8d26-e39f8c088804",
+    "timestamp": 1762152592798,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "afc76f67-eda8-482e-83b2-00ec9c3849b7",
+    "timestamp": 1762152592800,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "71e5aaed-ba9a-4dca-9abf-08a9e1f8a238",
+    "timestamp": 1762152593106,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "8cce3cb8-b80d-4511-a878-7d479b144ed0",
+    "timestamp": 1762152593107,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ac176721-1247-4fd5-9070-d5aebeadce0a",
+    "timestamp": 1762152593107,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a441ff3d-497c-482d-b311-0b1fab216916",
+    "timestamp": 1762152593108,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "ccfc3f89-6f7a-4cb7-9ed5-851c942f3d57",
+    "timestamp": 1762152593489,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a2d36e1c-bea3-4676-b48f-54c8884bf47e",
+    "timestamp": 1762152593489,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "71c122b8-5d27-4bc0-9ad9-4f103c4eb79c",
+    "timestamp": 1762152593490,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "92657c7d-a06d-4d77-93fe-84ebd4cb745f",
+    "timestamp": 1762152593491,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e130782e-4ec0-47c9-8801-3a203b028ed0",
+    "timestamp": 1762152593798,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "45e6c620-1aa5-4e56-903a-0665ab2ab270",
+    "timestamp": 1762152593799,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "84eb790c-d2e4-4524-b8dc-39bbe0a1d280",
+    "timestamp": 1762152593800,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "7ad50fd3-c058-49f0-9974-2ba7a0687952",
+    "timestamp": 1762152593801,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "9d9685c5-819c-4064-8d3f-bb40391ccd20",
+    "timestamp": 1762152594148,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "e97f4481-af43-4682-b424-cc5c11677c65",
+    "timestamp": 1762152594149,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "2527e26a-3624-4e27-a9b8-a507946cf9b8",
+    "timestamp": 1762152594150,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "0c1beab4-296a-4ac5-af82-9e97eb031825",
+    "timestamp": 1762152594150,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "f3b365e6-1f51-4d7e-a62e-8ca4534fea62",
+    "timestamp": 1762152594461,
+    "type": "passive",
+    "title": "Missing Content-Security-Policy header",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "84a89ab8-e9bd-4816-b6bc-4d3b9b2369e5",
+    "timestamp": 1762152594462,
+    "type": "passive",
+    "title": "Missing clickjacking protection (X-Frame-Options or CSP frame-ancestors)",
+    "severity": "medium",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "a5aa1d72-2082-4aad-8c2b-08f7baae4c58",
+    "timestamp": 1762152594462,
+    "type": "passive",
+    "title": "Missing X-Content-Type-Options: nosniff",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  },
+  {
+    "id": "b5493a31-82e5-44b8-8474-b3420794e1b6",
+    "timestamp": 1762152594463,
+    "type": "passive",
+    "title": "Missing Referrer-Policy",
+    "severity": "low",
+    "url": "https://example.com",
+    "plugin": "Passive Header Checks"
+  }
+]

@@ -98,6 +98,7 @@ export async function POST(req: NextRequest) {
   // allowing hosting platforms (Vercel) to detect the dependency and ship it.
   let puppeteer: any = null;
   let usingCore = false;
+  let chromiumLib: any = null; // @sparticuz/chromium when available (serverless-friendly)
   try {
     const mod = await import('puppeteer');
     puppeteer = mod?.default ?? mod;
@@ -106,6 +107,10 @@ export async function POST(req: NextRequest) {
       const mod = await import('puppeteer-core');
       puppeteer = mod?.default ?? mod;
       usingCore = true;
+      try {
+        const chr = await import('@sparticuz/chromium');
+        chromiumLib = (chr as any)?.default ?? chr;
+      } catch {}
     } catch {
       return Response.json(
         {
@@ -146,7 +151,19 @@ export async function POST(req: NextRequest) {
       ignoreHTTPSErrors: process.env.CHROME_IGNORE_CERT_ERRORS === '1',
       defaultViewport: { width: 1600, height: 960, deviceScaleFactor: 1 },
     };
-    if (usingCore) {
+    // Prefer serverless chromium when available (Vercel/AWS Lambda)
+    if (usingCore && chromiumLib) {
+      try {
+        const exe = await chromiumLib.executablePath();
+        launchOpts.executablePath = exe;
+        launchOpts.args = [...(chromiumLib.args || []), ...launchOpts.args];
+        // Force headless in serverless environments
+        launchOpts.headless = chromiumLib.headless ?? true;
+      } catch (e) {
+        // fall back to local resolution below
+      }
+    }
+    if (usingCore && !launchOpts.executablePath) {
       const { path: exe, tried } = resolveExecutable(chromiumOnly);
       if (!exe) throw new Error('Chromium not found. Set CHROME_PATH for puppeteer-core. Tried: ' + tried.join(', '));
       launchOpts.executablePath = exe;
