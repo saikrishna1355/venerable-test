@@ -219,14 +219,24 @@ export async function POST(req: NextRequest) {
     // Prefer serverless chromium when available (Vercel/AWS Lambda)
     if (usingCore && chromiumLib) {
       console.log("Using chromiumLib for serverless chromium");
+      console.log(
+        "chromiumLib methods:",
+        Object.getOwnPropertyNames(chromiumLib)
+      );
       try {
-        const exe = await chromiumLib.executablePath();
+        const exe = chromiumLib.executablePath
+          ? await chromiumLib.executablePath()
+          : chromiumLib.puppeteer.executablePath();
         console.log("Chromium executable path:", exe);
 
         launchOpts.executablePath = exe;
-        launchOpts.args = [...(chromiumLib.args || []), ...launchOpts.args];
+        launchOpts.args = [
+          ...(chromiumLib.args || chromiumLib.puppeteer?.args || []),
+          ...launchOpts.args,
+        ];
         // Force headless in serverless environments
-        launchOpts.headless = chromiumLib.headless ?? true;
+        launchOpts.headless =
+          chromiumLib.headless ?? chromiumLib.puppeteer?.headless ?? true;
         console.log("Launch options set with chromiumLib:", {
           executablePath: exe,
           headless: launchOpts.headless,
