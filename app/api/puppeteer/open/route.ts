@@ -148,6 +148,11 @@ export async function POST(req: NextRequest) {
       ignoreHTTPSErrors: process.env.CHROME_IGNORE_CERT_ERRORS === '1',
       defaultViewport: { width: 1600, height: 960, deviceScaleFactor: 1 },
     };
+    // Honor GOOGLE_CHROME_SHIM if provided by the platform
+    const shim = process.env.GOOGLE_CHROME_SHIM;
+    if (usingCore && shim && fs.existsSync(shim)) {
+      launchOpts.executablePath = shim;
+    }
     // Prefer serverless chromium when available (Vercel/AWS Lambda)
     if (usingCore && chromiumLib && isServerless) {
       try {
@@ -158,6 +163,16 @@ export async function POST(req: NextRequest) {
         launchOpts.headless = chromiumLib.headless ?? true;
       } catch (e) {
         // fall back to local resolution below
+      }
+    }
+    // Common serverless fallback paths for @sparticuz/chromium
+    if (usingCore && isServerless && !launchOpts.executablePath) {
+      const common = [
+        '/var/task/node_modules/@sparticuz/chromium/bin/chromium',
+        path.join(process.cwd(), 'node_modules', '@sparticuz', 'chromium', 'bin', 'chromium'),
+      ];
+      for (const p of common) {
+        try { if (fs.existsSync(p)) { launchOpts.executablePath = p; break; } } catch {}
       }
     }
     if (usingCore && !launchOpts.executablePath) {
