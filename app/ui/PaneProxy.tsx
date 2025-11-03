@@ -6,7 +6,7 @@ import CollapsibleSection from './CollapsibleSection';
 export default function PaneProxy() {
   const [url, setUrl] = useState('https://example.com');
   const [viaProxy, setViaProxy] = useState(true);
-  const [onlyChromium, setOnlyChromium] = useState(true);
+  const [onlyChromium, setOnlyChromium] = useState(false);
   const [appMode, setAppMode] = useState(true);
   const [bypassCSP, setBypassCSP] = useState(true);
   const proxiedSrc = useMemo(() => `/api/proxy?url=${encodeURIComponent(url)}`, [url]);

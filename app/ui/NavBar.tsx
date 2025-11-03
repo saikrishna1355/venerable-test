@@ -10,6 +10,7 @@ export default function NavBar() {
   const [busy, setBusy] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isSmall, setIsSmall] = useState(false);
 
   const load = async () => {
     try {
@@ -22,6 +23,21 @@ export default function NavBar() {
   useEffect(() => {
     setMounted(true);
     load();
+  }, []);
+
+  // Track viewport to gate the mobile menu button (in case CSS variants misbehave)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 767.98px)');
+    const onChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      // MediaQueryListEvent on modern browsers; initial is MediaQueryList
+      // @ts-ignore-next-line
+      setIsSmall((e.matches !== undefined ? e.matches : mq.matches) as boolean);
+    };
+    setIsSmall(mq.matches);
+    // Add listener with fallback for older browsers
+    try { mq.addEventListener('change', onChange as any); } catch { try { mq.addListener(onChange as any); } catch {} }
+    return () => { try { mq.removeEventListener('change', onChange as any); } catch { try { mq.removeListener(onChange as any); } catch {} } };
   }, []);
 
   // Close mobile menu on Escape key
@@ -63,17 +79,19 @@ export default function NavBar() {
             <Link href="/repeater" className="btn btn-ghost tiny shrink-0">Repeater</Link>
           </nav>
         </div>
-        {/* Mobile menu button */}
-        <button
-          className="ml-auto md:hidden btn tiny h-8 w-8 p-0 flex items-center justify-center"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={`block h-0.5 w-5 bg-current transition-transform duration-200 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''}`}></span>
-          <span className={`block h-0.5 w-5 bg-current my-1 transition-opacity duration-200 ${menuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-          <span className={`block h-0.5 w-5 bg-current transition-transform duration-200 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''}`}></span>
-        </button>
+        {/* Mobile menu button (rendered only on small viewports) */}
+        {isSmall && (
+          <button
+            className="ml-auto btn tiny h-8 w-8 p-0 flex items-center justify-center"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+            aria-expanded={menuOpen}
+          >
+            <span className={`block h-0.5 w-5 bg-current transition-transform duration-200 ${menuOpen ? 'translate-y-1.5 rotate-45' : ''}`}></span>
+            <span className={`block h-0.5 w-5 bg-current my-1 transition-opacity duration-200 ${menuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block h-0.5 w-5 bg-current transition-transform duration-200 ${menuOpen ? '-translate-y-1.5 -rotate-45' : ''}`}></span>
+          </button>
+        )}
         {/* Desktop controls */}
         <div className="ml-auto hidden sm:flex items-center gap-2 justify-end shrink-0">
           <span

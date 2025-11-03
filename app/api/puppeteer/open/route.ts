@@ -1,4 +1,5 @@
 export const runtime = 'nodejs';
+export const maxDuration = 60;
 
 import { NextRequest } from 'next/server';
 import os from 'os';
@@ -99,28 +100,24 @@ export async function POST(req: NextRequest) {
   let puppeteer: any = null;
   let usingCore = false;
   let chromiumLib: any = null; // @sparticuz/chromium when available (serverless-friendly)
+  const isServerless = !!(process.env.VERCEL || process.env.AWS_EXECUTION_ENV || process.env.LAMBDA_TASK_ROOT);
   try {
-    const mod = await import('puppeteer');
+    const mod = await import('puppeteer-core');
     puppeteer = mod?.default ?? mod;
-  } catch {
+    usingCore = true;
     try {
-      const mod = await import('puppeteer-core');
-      puppeteer = mod?.default ?? mod;
-      usingCore = true;
-      try {
-        const chr = await import('@sparticuz/chromium');
-        chromiumLib = (chr as any)?.default ?? chr;
-      } catch {}
+      const chrS = await import('@sparticuz/chromium');
+      chromiumLib = (chrS as any)?.default ?? chrS;
     } catch {
-      return Response.json(
-        {
-          ok: false,
-          message:
-            'Puppeteer packages are missing. Install "puppeteer" (preferred) or "puppeteer-core" and set CHROME_PATH for your target Chromium.',
-        },
-        { status: 500 },
-      );
+      // no serverless chromium available; will fall back to local executable
     }
+    // Only use bundled serverless Chromium on serverless platforms
+    if (!isServerless) chromiumLib = null;
+  } catch {
+    return Response.json(
+      { ok: false, message: 'puppeteer-core not installed. Please add puppeteer-core.' },
+      { status: 500 },
+    );
   }
   if (!puppeteer?.launch) {
     return Response.json(
@@ -145,14 +142,14 @@ export async function POST(req: NextRequest) {
 
   async function launch(withProxy: boolean) {
     const launchOpts: any = {
-      headless: body.headless ?? false,
+      headless: body.headless ?? (isServerless ? true : false),
       devtools: body.devtools ?? false,
       args: buildArgs(withProxy),
       ignoreHTTPSErrors: process.env.CHROME_IGNORE_CERT_ERRORS === '1',
       defaultViewport: { width: 1600, height: 960, deviceScaleFactor: 1 },
     };
     // Prefer serverless chromium when available (Vercel/AWS Lambda)
-    if (usingCore && chromiumLib) {
+    if (usingCore && chromiumLib && isServerless) {
       try {
         const exe = await chromiumLib.executablePath();
         launchOpts.executablePath = exe;

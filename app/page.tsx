@@ -19,7 +19,7 @@ export default function Home() {
         body: JSON.stringify({
           url,
           bypassCSP: true,
-          chromiumOnly: true,
+          chromiumOnly: false,
           headless: false,
           devtools: false,
           viaProxy: true,
