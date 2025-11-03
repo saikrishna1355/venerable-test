@@ -111,8 +111,6 @@ export async function POST(req: NextRequest) {
     } catch {
       // no serverless chromium available; will fall back to local executable
     }
-    // Only use bundled serverless Chromium on serverless platforms
-    if (!isServerless) chromiumLib = null;
   } catch {
     return Response.json(
       { ok: false, message: 'puppeteer-core not installed. Please add puppeteer-core.' },
@@ -154,7 +152,7 @@ export async function POST(req: NextRequest) {
       launchOpts.executablePath = shim;
     }
     // Prefer serverless chromium when available (Vercel/AWS Lambda)
-    if (usingCore && chromiumLib && isServerless) {
+    if (usingCore && chromiumLib) {
       try {
         const exe = await chromiumLib.executablePath();
         launchOpts.executablePath = exe;
@@ -325,7 +323,7 @@ export async function POST(req: NextRequest) {
       }
     }
     // Success or non-proxy attempt
-    return Response.json({ ok: !navError, launched: true, usingCore, usedProxy: !!body.viaProxy && !navError, headless: first.launchOpts.headless, navError: navError ? String(navError?.message || navError || '') : undefined });
+    return Response.json({ ok: !navError, launched: true, usingCore, usedProxy: !!body.viaProxy && !navError, headless: first.launchOpts.headless, execPath: first.launchOpts.executablePath || null, navError: navError ? String(navError?.message || navError || '') : undefined });
   } catch (error: any) {
     return Response.json({ ok: false, message: 'Failed to launch Puppeteer', error: String(error?.message || error || '') }, { status: 500 });
   }
