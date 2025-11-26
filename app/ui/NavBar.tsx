@@ -156,7 +156,7 @@ export default function NavBar() {
                   </div>
                 </li>
                 <li className="flex items-center justify-between">
-                  <div className="text-sm">Theme</div>
+                  <div className="text-sm">Themeddddsssss</div>
                   <ThemeToggle />
                 </li>
               </ul>
